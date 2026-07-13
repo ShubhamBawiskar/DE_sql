@@ -1,4 +1,4 @@
--- Active: 1783779183123@@127.0.0.1@3306@pg
+
 USE customer_orders;
 
 SELECT DATABASE();
@@ -135,7 +135,7 @@ WHERE department IN ('it', 'hr');
 SELECT SUM(salary)
 AS total_salary
 FROM emp
-WHERE department = 'it'OR department = 'hr';
+WHERE department = 'it' OR department = 'hr';
 
 
 -- AVG() Functions
