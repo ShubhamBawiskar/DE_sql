@@ -1,0 +1,21 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Mysql-DE",
+            "database": "mysql",
+            "username": "root"
+        }
+    ],
+    "[sql]": {
+        "editor.snippetSuggestions": "top"
+    }
+}

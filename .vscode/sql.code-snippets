@@ -1,0 +1,24 @@
+{
+  "CASE keyword": {
+    "scope": "sql",
+    "prefix": [
+      "case",
+      "CASE"
+    ],
+    "body": [
+      "CASE"
+    ],
+    "description": "SQL CASE keyword"
+  },
+  "USE keyword": {
+    "scope": "sql",
+    "prefix": [
+      "use",
+      "USE"
+    ],
+    "body": [
+      "USE"
+    ],
+    "description": "SQL USE keyword"
+  }
+}

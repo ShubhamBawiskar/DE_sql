@@ -1,0 +1,11 @@
+order_id,customer_name,city,product_name,category,quantity,unit_price,discount,order_status,delivery_partner,order_date
+101,Rahul,Bhubaneswar,Laptop,Electronics,1,65000.00,5000.00,Delivered,BlueDart,2025-01-10
+102,Priya,Cuttack,Mouse,Electronics,2,600.00,NULL,Delivered,Delhivery,2025-01-15
+103,Amit,Puri,Chair,Furniture,4,3500.00,500.00,Pending,NULL,2025-02-05
+104,Sneha,Bhubaneswar,Table,Furniture,1,7500.00,NULL,Delivered,BlueDart,2025-02-18
+105,Rakesh,Rourkela,Keyboard,Electronics,3,1500.00,200.00,Cancelled,DTDC,2025-03-02
+106,Anjali,Cuttack,Monitor,Electronics,2,12000.00,1000.00,Delivered,BlueDart,2025-03-08
+107,Deepak,Sambalpur,"Office Chair",Furniture,2,4500.00,NULL,Pending,NULL,2025-03-10
+108,Neha,Bhubaneswar,Printer,Electronics,1,18000.00,1500.00,Delivered,Delhivery,2025-04-12
+109,Sourav,Puri,Desk,Furniture,2,8000.00,NULL,Delivered,BlueDart,2025-04-15
+110,Kiran,Cuttack,"Hard Disk",Electronics,5,4500.00,300.00,Pending,DTDC,2025-05-01
