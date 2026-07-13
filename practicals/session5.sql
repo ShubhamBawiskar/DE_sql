@@ -1,4 +1,4 @@
--- Active: 1783779183123@@127.0.0.1@3306@assignment4
+-- Active: 1783779183123@@127.0.0.1@3306@pg
 USE customer_orders;
 
 SELECT DATABASE();
@@ -88,6 +88,22 @@ SELECT * FROM student;
 SELECT COUNT(age) FROM student;
 SELECT COUNT(*) FROM student;
 
+
+CREATE DATABASE pg;
+
+SHOW TABLES;
+DESC emp;
+
+ALTER TABLE emp 
+    MODIFY first_name VARCHAR(30),
+    MODIFY last_name VARCHAR(30),
+    MODIFY department VARCHAR(30),
+    MODIFY manager_id VARCHAR(30),
+    MODIFY salary INT,
+    MODIFY bonus INT,
+    MODIFY hire_date VARCHAR(30);
+
+-- SUM() Functions
 -- ===================================================
 -- Q. Write an SQL query to calculate the total salary of employees.
 -- ====================================================
@@ -103,5 +119,71 @@ FROM emp;
 SELECT SUM(salary)
 AS total_comp
 FROM emp
-WHERE ;
+WHERE department='IT';
 
+-- ===================================================
+-- Q. Write an SQL query to calculate the total salary of employees working in the 'IT' or ‘HR’ department.
+-- ====================================================
+SELECT SUM(salary)
+AS total_salary
+FROM emp
+WHERE department IN ('it', 'hr');
+
+-- ===================================================
+-- Q. Write an SQL query to calculate the total salary of employees working in the 'IT' and ‘HR’ department.
+-- ====================================================
+SELECT SUM(salary)
+AS total_salary
+FROM emp
+WHERE department = 'it'OR department = 'hr';
+
+
+-- AVG() Functions
+-- ===================================================
+-- Q. Write an SQL query to calculate the average salary of employees.
+-- ====================================================
+SELECT AVG(salary)
+AS avg_salary
+FROM emp;
+
+-- ===================================================
+-- Write an SQL query to calculate the average salary of employees working in the 'IT' department.
+-- ====================================================
+SELECT * FROM emp;
+
+SELECT ROUND(AVG(salary),2)
+AS tot_salary_IT
+FROM emp
+WHERE department='it';
+
+-- MAX() Functions
+-- ===================================================
+-- Q. Write an SQL query to find the max salary.
+-- ====================================================
+SELECT * FROM emp;
+
+SELECT MAX(salary)
+as max_sal
+FROM emp;
+
+-- ===================================================
+-- Write an SQL query to find latest hire date from the employee table.
+-- ====================================================
+SELECT MAX(hire_date)
+AS latest_hired
+FROM emp;
+
+--  MIN() Function
+-- ===================================================
+-- Write an SQL query to find the minimum salary.
+-- ====================================================
+SELECT MIN(salary)
+AS min_sal
+FROM emp;
+
+-- ===================================================
+-- Write an SQL query to find oldest hire date from the employee table.
+-- ====================================================
+SELECT MIN(hire_date)
+AS latest_hired
+FROM emp;
