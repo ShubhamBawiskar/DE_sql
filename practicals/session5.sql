@@ -71,3 +71,37 @@ SET
 
 SELECT * FROM emp;
 
+CREATE TABLE student (
+	name varchar(30), 
+    	address varchar(100), 
+    	age int
+);
+
+INSERT INTO student VALUES ('Ram', 'BBSR', 30), 
+('Alok', 'BBSR', null),
+('Raj', null, null),
+(null, null, null);
+
+
+SELECT * FROM student;
+
+SELECT COUNT(age) FROM student;
+SELECT COUNT(*) FROM student;
+
+-- ===================================================
+-- Q. Write an SQL query to calculate the total salary of employees.
+-- ====================================================
+SELECT * FROM emp;
+
+SELECT SUM(salary)
+AS total_comp
+FROM emp;
+
+-- ===================================================
+-- Q. Write an SQL query to calculate the total salary of employees working in the 'IT' department.
+-- ====================================================
+SELECT SUM(salary)
+AS total_comp
+FROM emp
+WHERE ;
+

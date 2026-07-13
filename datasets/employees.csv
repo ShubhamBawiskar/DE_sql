@@ -1,0 +1,11 @@
+emp_id,first_name,last_name,department,manager_id,salary,bonus,hire_date
+201,Arun,Mehta,IT,301,65000.00,6000.00,2022-01-10
+202,Bhavya,Singh,HR,NULL,48000.00,NULL,2023-06-18
+203,Charan,Rao,Finance,302,72000.00,5000.00,2021-11-05
+204,Deepa,Nair,NULL,303,58000.00,2500.00,2024-01-22
+205,Farhan,Khan,Sales,NULL,45000.00,1500.00,2020-03-14
+206,Gauri,Patil,Marketing,304,81000.00,NULL,2022-09-30
+207,Harish,Verma,IT,301,95000.00,12000.00,2021-01-08
+208,Isha,Das,NULL,NULL,53000.00,NULL,2023-07-19
+209,Karan,Yadav,Operations,305,69000.00,3500.00,2024-12-01
+210,Lavanya,Joshi,HR,NULL,77000.00,7000.00,2022-01-28
