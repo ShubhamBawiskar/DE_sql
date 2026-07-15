@@ -20,5 +20,16 @@
       "USE"
     ],
     "description": "SQL USE keyword"
+  },
+  "CHECK constraint": {
+    "scope": "sql",
+    "prefix": [
+      "check",
+      "CHECK"
+    ],
+    "body": [
+      "CHECK ($1)"
+    ],
+    "description": "SQL CHECK constraint"
   }
 }
