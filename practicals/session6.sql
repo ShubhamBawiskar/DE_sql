@@ -159,6 +159,18 @@ LIMIT 100;
     SELECT column-name from table-name GROUP BY col1, col2;
 */
 
+/*
+How group by clause works
+- Step1: 
+    * Select specified column from group by clause
+    * It returns similar data items into set of group from that column.
+    * Creates result set table and store these data
+- Step2:
+    * Execute select statement. It goes to result set table and fetch columns.
+
+*/
+
+
 -- Write an SQL query to find the total salary expenditure for each department in the 'employee' table.
 SELECT department, sum(salary)
 FROM emp
@@ -181,3 +193,83 @@ GROUP BY department;
 SELECT department, MAX(salary)
 FROM emp
 GROUP BY department;
+
+-- Write a query to display each department’s minimum, maximum and average salary from employee table.
+SELECT 
+    department, 
+    min(salary) AS min_sal, 
+    MAX(salary) AS max_sal, 
+    AVG(salary) AS avg_sal
+FROM emp
+GROUP BY
+    department
+-- =================================================================================================================================
+
+-- =================================================================================================================================
+/* HAVING
+    - We are not allowed to use where clause after group by clause. In this case we can use having clause.
+    - Filters rows after grouping.
+
+* WHERE
+    Filters rows before grouping
+    Cannot use aggregate functions directly
+    Cannot use derived/aliased columns in WHERE
+    Can be used with SELECT, UPDATE, and DELETE statements.
+
+* HAVING
+    Filters rows after grouping
+    Can use aggregate functions directly to filter groups
+    Can use derived/aliased columns in HAVING
+    Works only with SELECT statements.
+
+*/
+
+-- Write a query to display those departments having more than 2 employees from employee table by using group by clause.
+SELECT department, COUNT(*)
+FROM emp 
+GROUP BY department
+HAVING COUNT(*)>=2;
+
+SELECT department, count(*) AS EmpCount 
+FROM emp 
+GROUP BY department 
+HAVING EmpCount>=2;
+
+-- Write a query to display those department sums of salary having more than 10000 from employee table using group by clause.
+SELECT department, SUM(salary) AS total_salary
+FROM emp
+GROUP BY department
+HAVING total_salary>100000;
+
+-- Write a query to display sum of salary of ‘HR’ department.
+SELECT department, SUM(salary) as total_salary
+FROM emp
+GROUP BY department
+HAVING department = 'it';
+
+-- =================================================================================================================================
+
+
+
+-- Execution Order ===========================================================================
+    SQL Query Execution Order
+EXPLAIN ANALYZE
+SELECT designation, sum(salary) total_sal
+FROM employee 
+WHERE department='IT'
+GROUP BY designation 
+HAVING total_sal > 90000
+ORDER BY total_sal DESC
+LIMIT 1;
+
+/*
+    * FROM: Specifies the table(s) to retrieve data from.
+    * WHERE: Filters rows based on a specified condition.
+    * GROUP BY: Groups rows that have the same values in specified columns. Then apply aggregation on each group.
+    * HAVING: Filters groups based on a specified condition.
+    * SELECT: Specifies the columns to be returned in the result set.
+    * ORDER BY: Sorts the result set based on specified columns.
+
+    FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY -> LIMIT
+*/
+-- Execution Order ===========================================================================
