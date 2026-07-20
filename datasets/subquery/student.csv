@@ -1,0 +1,11 @@
+id,name,email,invited_by_id
+1,Karli Roberson,karli.roberson@example.com,null
+2,Veronica Knight,v.knight@example.com,1
+3,Ann Smith,ann.smith@example.com,2
+4,Caroline Knight,c.knight@example.com,1
+5,Robert Palmer,rpalmer@example.com,3
+6,Leslie Hartman,lhartman@example.com,5
+7,Carl Anderson,carl.anderson@example.com,5
+8,Natalie Love,natlove@example.com,null
+9,Michael Paulson,m.paulson@example.com,5
+10,Patricia Johnson,pjohnson@example.com,7
